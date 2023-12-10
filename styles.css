@@ -1,0 +1,260 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #2c3e50; /* Dark background color */
+    color: #ecf0f1; /* Light text color */
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+}
+
+header {
+    background-color: #34495e; /* Dark header background color */
+    color: #ecf0f1;
+    padding: 15px 0;
+    text-align: center;
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards 0.5s;
+}
+
+nav {
+    margin-top: 10px;
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards 0.5s;
+}
+
+nav a {
+    color: #ecf0f1;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+    color: #3498db; /* Highlight color on hover */
+    transform: translateY(-3px); /* Move the link up slightly on hover */
+}
+
+main {
+    margin: 20px;
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards 0.5s;
+}
+
+section {
+    margin-bottom: 40px;
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards 0.5s;
+}
+
+button {
+    background-color: #3498db; /* Button color */
+    color: #ecf0f1;
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9; /* Button color on hover */
+    transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #ecf0f1; /* Light background for table */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards 0.5s;
+}
+
+table, th, td {
+    border: 1px solid #bdc3c7; /* Border color for table */
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #3498db; /* Header cell color */
+    color: #ecf0f1;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.1);
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #ecf0f1;
+    padding: 20px;
+    max-width: 400px;
+    margin: auto;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    animation: slide-in 0.3s ease-out;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #3498db; /* Close button color */
+}
+
+.close:hover {
+    color: #2980b9; /* Close button color on hover */
+}
+
+/* Animation for modal */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Improved styles for the form inside the modal */
+#eventForm {
+    display: flex;
+    flex-direction: column;
+}
+
+#eventForm label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #2c3e50; /* Dark text color */
+}
+
+#eventForm input,
+#eventForm button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+    background-color: #ecf0f1; /* Light background for input and button */
+}
+
+#eventForm input:focus {
+    border-color: #3498db; /* Border color on focus */
+}
+
+#eventForm button {
+    background-color: #3498db; /* Button color */
+    color: #ecf0f1;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#eventForm button:hover {
+    background-color: #2980b9; /* Button color on hover */
+}
+
+/* ... (rest of the styles) */
+/* ... (previous styles) */
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000; /* Adjusted z-index to ensure it appears above other elements */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #ecf0f1;
+    padding: 20px;
+    max-width: 400px;
+    margin: auto;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    animation: slide-in 0.3s ease-out;
+    z-index: 1001; /* Adjusted z-index to ensure it appears above the modal background */
+}
+
+/* ... (rest of the styles) */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ecf0f1; /* Light background color */
+    color: #2c3e50; /* Dark text color */
+}
+
+header {
+    background-color: #3498db; /* Header background color */
+    color: #ecf0f1; /* Light text color */
+    padding: 15px 0;
+    text-align: center;
+    opacity: 1;
+    animation: fadeInUp 1s ease forwards 0.5s;
+}
+
+nav {
+    margin-top: 10px;
+    opacity: 1;
+    animation: fadeInUp 1s ease forwards 0.5s;
+}
+
+/* ... (rest of your existing styles) */

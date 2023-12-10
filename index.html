@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Event Management System</h1>
+        <nav>
+            <a href="index.html">Events</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="eventSection">
+            <h2>Events</h2>
+
+            <button id="openModalBtn" onclick="openModal()">Add Event</button>
+
+            <div id="eventModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <form id="eventForm" enctype="multipart/form-data">
+                        <label for="eventName">Event Name:</label>
+                        <input type="text" id="eventName" required>
+
+                        <label for="eventDate">Event Date:</label>
+                        <input type="date" id="eventDate" required>
+
+                        <label for="eventPhoto">Event Photo:</label>
+                        <input type="file" id="eventPhoto" accept="image/*">
+
+                        <button type="button" onclick="addEvent()">Add Event</button>
+                        <button type="button" onclick="updateEvent()">Update Event</button>
+                        <button type="button" onclick="clearForm()">Clear Form</button>
+                    </form>
+                </div>
+            </div>
+
+            <table id="eventTable">
+                <thead>
+                    <tr>
+                        <th>Event Name</th>
+                        <th>Event Date</th>
+                        <th>Event Photo</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Event data will be displayed here -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
